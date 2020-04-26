@@ -1,0 +1,13 @@
+﻿
+[HttpPost]
+[ValidationAntiForgeryToken]
+public IActionResult Update([Bind("blogTitle,content,blogDate,id")] BlogPost blog)
+{
+    if (ModelState.IsValid)
+    {
+        _content.Update(blog);
+        _content.SaveChanges();
+        return RedirectToAction(nameof(List));
+    }
+    return View(blog);
+}

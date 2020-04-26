@@ -1,0 +1,25 @@
+﻿
+@model DailyBlogger.Models.BlogPost
+@{ 
+    Layout = null;
+}
+
+    
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h2>@Model.blogTitle</h2>
+    <p>@Model.content</p>
+
+    <p>
+        <a asp.net="Edit" asp-route-id="@Model.id">Delete this post</a>
+    </p>
+</body>
+</html>

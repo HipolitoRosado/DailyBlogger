@@ -1,0 +1,7 @@
+﻿public IActionResult Delete([Bind("id")] int id)
+{
+    BlogPost blogPost = _content.blogPost.Find(id);
+    _content.Remove(blogPost);
+    _content.SaveChanges();
+    return RedirectToAction(nameof(List));
+}
