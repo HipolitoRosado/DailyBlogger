@@ -19,7 +19,7 @@ namespace DailyBlogger.Controllers
         public IActionResult List()
         {
             IEnumerable<BlogPost> post = _context.blogPost.ToList<BlogPost>();
-            return View();
+            return View(post);
         }
 
         public IActionResult New()
